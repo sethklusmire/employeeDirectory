@@ -2,27 +2,14 @@ import React from "react";
 
 const Search = (props) => {
     return (
-        <div>
+        <form>
             <input type="text" className="input" onChange={props.handleInputChange} value={props.search} placeholder="Search for Employee" />
 
-
-
-
-
-
-        </div>
-
-
-
-
+        </form>
 
     )
 
-
-
-
 }
-
 
 
 export default Search;
