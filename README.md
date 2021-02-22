@@ -1,7 +1,7 @@
 # Employee Directory
 
 ## Description
-And Employee directory that sorts through a number of employees.
+An Employee directory that sorts through a number of employees.
 
 ## Table of Contents
 
