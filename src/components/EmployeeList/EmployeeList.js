@@ -9,6 +9,7 @@ const EmployeeList = () => {
   const [filterEmployees, setFilterEmployees] = useState([]);
 
   useEffect(() => {
+    // call the random person API
     API.getEmployees().then((res) => {
       setEmployees(res.data.results);
       setFilterEmployees(res.data.results);
@@ -17,7 +18,7 @@ const EmployeeList = () => {
 
   const handleInputChange = (event) => {
     setSearch(event.target.value);
-    // this is where my filters need to go
+    // filter through the categories
     const results = employees.filter(
       (employee) =>
         employee.name.first
@@ -34,6 +35,7 @@ const EmployeeList = () => {
   };
 
   const handleSortFirst = () => {
+    // sort by first name
       const sorted  = employees.sort((a, b) => 
       a.name.first > b.name.first ? 1 : -1
       );
@@ -41,6 +43,7 @@ const EmployeeList = () => {
   }
 
   const handleSortLast = () => {
+    // sort by last name
     const sorted  = employees.sort((a, b) => 
     a.name.last > b.name.last ? 1 : -1
     );
